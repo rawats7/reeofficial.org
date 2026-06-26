@@ -324,10 +324,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 44px;
             position: relative;
-            overflow: visible;
+            overflow: hidden;  /* clip the image */
             z-index: 2;
+        }
+        /* image fills the inner circle */
+        .avatar-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         .avatar-inner .live-badge {
             position: absolute;
@@ -840,9 +846,6 @@
                 width: 85px;
                 height: 85px;
             }
-            .avatar-inner {
-                font-size: 34px;
-            }
         }
     </style>
 </head>
@@ -870,12 +873,13 @@
     <main class="main-wrapper">
         <div class="content-stack">
 
-            <!-- AVATAR - NOW CLICKABLE -->
+            <!-- AVATAR - CLICKABLE, NOW WITH IMAGE -->
             <div class="avatar-section">
-                <a href="ree.jpg" target="_blank" rel="noopener noreferrer" class="avatar-link">
+                <a href="https://t.me/+JwMLuOTFKkw0YjJl" target="_blank" rel="noopener noreferrer" class="avatar-link">
                     <div class="avatar-ring">
                         <div class="avatar-inner">
-                            ⚡
+                            <!-- Profile photo: replace ree.jpg with your actual image path -->
+                            <img src="ree.jpg" alt="Profile Photo">
                             <span class="live-badge"></span>
                         </div>
                     </div>
@@ -902,7 +906,6 @@
 
             <!-- CTA - MASSIVE BUTTON -->
             <a class="cta-button" href="https://t.me/+JwMLuOTFKkw0YjJl" target="_blank" rel="noopener noreferrer">
-                <!-- Real Telegram SVG Icon -->
                 <svg class="cta-button__icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056
                     0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18
